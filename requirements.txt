@@ -1,6 +1,7 @@
 altair
 pandas
 streamlit
-chromadb
+chromadb==0.3.29
 langchain
 openai
+tiktoken

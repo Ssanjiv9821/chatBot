@@ -13,8 +13,8 @@ from langchain.document_loaders import DirectoryLoader
 # Open Ai Based ChatBot
 
 """
+
 os.environ['OPENAI_API_KEY'] = st.secrets["OPENAI_API_KEY"]
-st.write(os.environ['OPENAI_API_KEY'])
 st.write("Please type a question regarding the vision pro headet lets see if this updates!!")
 st.text_input("Question", key="question")
 query = st.session_state.question
@@ -47,5 +47,6 @@ if num_items_in_db == 0:
     vector_db = store_data_in_db(texts=texts)
 retriever = vector_db.as_retriever(search_kwargs = {"k":1})
 qa_chain = RetrievalQA.from_chain_type(llm=OpenAI(),chain_type="stuff",retriever=retriever,return_source_documents=True)
-llm_response = qa_chain(query)
-process_llm_response(llm_response)
+if(len(query) != 0):
+    llm_response = qa_chain(query)
+    process_llm_response(llm_response)
