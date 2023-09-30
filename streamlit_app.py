@@ -5,7 +5,7 @@ import os
 # Open Ai Based ChatBot
 
 """
-os.environ['OPENAI_API_KEY'] = st.secrets["chatbot-asnnwii3pco2jv6wtzslqw"]
+os.environ['OPENAI_API_KEY'] = st.secrets["OPENAI_API_KEY"]
 
 st.write(os.environ['OPENAI_API_KEY'])
 st.write("Please type a question regarding the vision pro headet lets see if this updates!!")
