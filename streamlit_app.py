@@ -13,8 +13,7 @@ from langchain.document_loaders import DirectoryLoader
 # Open Ai Based ChatBot
 
 """
-#os.environ['OPENAI_API_KEY'] = st.secrets["OPENAI_API_KEY"]
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ['OPENAI_API_KEY'] = st.secrets["OPENAI_API_KEY"]
 st.write(os.environ['OPENAI_API_KEY'])
 st.write("Please type a question regarding the vision pro headet lets see if this updates!!")
 st.text_input("Question", key="question")
